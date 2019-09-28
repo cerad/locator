@@ -4,5 +4,7 @@ namespace App\ItemHandler;
 
 interface ItemHandlerInterface
 {
+    static public function getDefaultIndexName() : string;
+
     public function hello() : string ;
 }

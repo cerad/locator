@@ -48,6 +48,9 @@ class DefaultController extends AbstractController
         $two = $this->itemHandlersLocatorByKey->get('two');
         $twoHello = $two->hello();
 
+        $three = $this->itemHandlersLocator->get('three');
+        $threeHello = $three->hello();
+
         $three = $this->itemHandlersLocator2->get(ThreeItemHandler::class);
         $threeHello = $three->hello();
 

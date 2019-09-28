@@ -64,6 +64,10 @@ class Kernel extends BaseKernel implements CompilerPassInterface
     {
         $itemHandlerIds = [];
         foreach ($container->findTaggedServiceIds('my.item_handler') as $id => $tags) {
+
+            // Could get key from static method
+            //$key = $id::getDefaultIndexName();dump($key);
+
             $itemHandlerIds[$id] = new Reference($id);
         }
         $itemHandlersLocator = $container->getDefinition(ItemHandlersLocator2::class);
