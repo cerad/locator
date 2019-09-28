@@ -4,5 +4,5 @@ namespace App\ItemHandler;
 
 interface ItemHandlerInterface
 {
-
+    public function hello() : string ;
 }

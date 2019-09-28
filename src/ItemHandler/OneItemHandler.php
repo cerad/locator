@@ -8,4 +8,5 @@ class OneItemHandler implements ItemHandlerInterface
     {
         return 'one';
     }
+    public function hello() : string { return 'hello one'; }
 }

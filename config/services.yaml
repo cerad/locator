@@ -18,3 +18,7 @@ services:
         $itemHandlersIterable:       !tagged 'app.item_handler'
         $itemHandlersLocatorByClass: !tagged_locator { tag: 'app.item_handler' }
         $itemHandlersLocatorByKey:   !tagged_locator { tag: 'app.item_handler', default_index_method: 'getDefaultIndexName'}
+
+    App\ItemHandler\ItemHandlersLocator:
+        arguments:
+            - !tagged_locator { tag: 'app.item_handler', default_index_method: 'getDefaultIndexName'}
